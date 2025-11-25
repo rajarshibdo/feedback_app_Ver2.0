@@ -91,7 +91,7 @@ with st.form("team_survey_form", clear_on_submit=True):
 # -----------------------------
 # Power Automate Connection
 # -----------------------------
-POWER_AUTOMATE_URL = "YOUR_POWER_AUTOMATE_URL_HERE"
+POWER_AUTOMATE_URL = "https://default37d6c2dc481348e3a84228cab8171c.98.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/1fc00c0d6b0e4966b81adf312d4d1c7c/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=PcXv8uwlQWGh65LNuoKpRVrDefJGZjlm50WPBSpQhic"
 
 def send_to_online_excel(data: dict):
     headers = {"Content-Type": "application/json"}
@@ -125,3 +125,4 @@ if submitted:
     send_to_online_excel(payload)
 
     st.success(f"Thank you for your response! Sentiment detected: **{sentiment}**")
+
